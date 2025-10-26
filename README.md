@@ -81,6 +81,7 @@ Interfejs graficzny został wykonany w **WPF**, a konwersja odbywa się po klikn
 ## Autor
 
 **Maciej Strzelec**
+
 **Maj 2025**
 
 ---
