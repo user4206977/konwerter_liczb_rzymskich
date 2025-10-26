@@ -1,0 +1,72 @@
+﻿<Window x:Class="liczby_rzymskie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:liczby_rzymskie"
+        mc:Ignorable="d"
+        Title="Konwersja systemów liczbowych" Height="400" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <GroupBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="Gray" Header="Podaj cyfrę rzymską:" x:Name="pole_wpisania">
+            <StackPanel VerticalAlignment="Center">
+                <TextBox
+                x:Name="Wpisz"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Margin="10"
+                Text=""
+                FontSize="35"
+                BorderThickness="0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BorderBrush="Gray" Header="Liczba arabska:" x:Name="wynik_liczby">
+            <StackPanel VerticalAlignment="Center">
+                <Label
+                x:Name="Wypisz"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                Margin="10"
+                FontWeight="Bold"
+                Content=""
+                FontSize="35"
+                BorderThickness="0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="1"
+            FontSize="20"
+            Content="Konwertuj"
+            Margin="10" Click="Convert"/>
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="2"
+            FontSize="20"
+            Content="Resetuj"
+            Margin="10" Click="Reset"/>
+
+        <GroupBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Header="Rodzaj działania" BorderThickness="2">
+            <StackPanel VerticalAlignment="Center" >
+                <RadioButton Margin="7" x:Name="RzymToArab" Checked="RzymToArab_Checked">Konwersja z liczby rzymskiej na arabską</RadioButton>
+                <RadioButton Margin="7" x:Name="ArabToRzym" Checked="ArabToRzym_Checked">Konwersja z liczby arabskiej na rzymską</RadioButton>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
